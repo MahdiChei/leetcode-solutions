@@ -40,5 +40,12 @@
     "difficulty": "Easy",
     "language": "SQL",
     "solved_at": "2026-09-19T18:48:56+00:00"
+  },
+  "0596": {
+    "title": "Classes With at Least 5 Students",
+    "slug": "classes-with-at-least-5-students",
+    "difficulty": "Easy",
+    "language": "SQL",
+    "solved_at": "2026-09-19T18:51:54+00:00"
   }
 }
