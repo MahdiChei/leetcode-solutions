@@ -19,5 +19,12 @@
     "difficulty": "Easy",
     "language": "SQL",
     "solved_at": "2026-09-19T16:10:59+00:00"
+  },
+  "0620": {
+    "title": "Not Boring Movies",
+    "slug": "not-boring-movies",
+    "difficulty": "Easy",
+    "language": "SQL",
+    "solved_at": "2026-09-19T16:45:51+00:00"
   }
 }
