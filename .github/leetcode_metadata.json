@@ -60,6 +60,13 @@
     "slug": "user-activity-for-the-past-30-days-i",
     "difficulty": "Easy",
     "language": "SQL",
-    "solved_at": "2026-09-19T20:24:48+00:00"
+    "solved_at": "2026-09-19T20:27:17+00:00"
+  },
+  "1415": {
+    "title": "Students and Examinations",
+    "slug": "students-and-examinations",
+    "difficulty": "Easy",
+    "language": "SQL",
+    "solved_at": "2026-09-19T23:23:07+00:00"
   }
 }
