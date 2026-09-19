@@ -8,9 +8,9 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | Difficulty | Solved |
 |---|---:|
 | Easy | 7 |
-| Medium | 0 |
+| Medium | 1 |
 | Hard | 0 |
-| **Total** | **7** |
+| **Total** | **8** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,11 +25,11 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 1317 | [Monthly Transactions I](./1317-monthly-transactions-i/) | Medium | SQL | 2026-09-19 |
 | 596 | [Classes With at Least 5 Students](./0596-classes-with-at-least-5-students/) | Easy | SQL | 2026-09-19 |
 | 586 | [Customer Placing the Largest Number of Orders](./0586-customer-placing-the-largest-number-of-orders/) | Easy | SQL | 2026-09-19 |
 | 584 | [Find Customer Referee](./0584-find-customer-referee/) | Easy | SQL | 2026-09-19 |
 | 620 | [Not Boring Movies](./0620-not-boring-movies/) | Easy | SQL | 2026-09-19 |
-| 181 | [Employees Earning More Than Their Managers](./0181-employees-earning-more-than-their-managers/) | Easy | SQL | 2026-09-19 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
@@ -37,6 +37,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:PROBLEMS -->
 | # | Problem | Difficulty | Language |
 |---:|---|---|---|
+| 1317 | [Monthly Transactions I](./1317-monthly-transactions-i/) | Medium | SQL |
 | 620 | [Not Boring Movies](./0620-not-boring-movies/) | Easy | SQL |
 | 596 | [Classes With at Least 5 Students](./0596-classes-with-at-least-5-students/) | Easy | SQL |
 | 586 | [Customer Placing the Largest Number of Orders](./0586-customer-placing-the-largest-number-of-orders/) | Easy | SQL |
