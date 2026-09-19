@@ -26,5 +26,12 @@
     "difficulty": "Easy",
     "language": "SQL",
     "solved_at": "2026-09-19T16:45:51+00:00"
+  },
+  "0584": {
+    "title": "Find Customer Referee",
+    "slug": "find-customer-referee",
+    "difficulty": "Easy",
+    "language": "SQL",
+    "solved_at": "2026-09-19T16:52:59+00:00"
   }
 }

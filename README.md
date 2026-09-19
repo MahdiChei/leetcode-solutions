@@ -7,10 +7,10 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:PROGRESS -->
 | Difficulty | Solved |
 |---|---:|
-| Easy | 4 |
+| Easy | 5 |
 | Medium | 0 |
 | Hard | 0 |
-| **Total** | **4** |
+| **Total** | **5** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,6 +25,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 584 | [Find Customer Referee](./0584-find-customer-referee/) | Easy | SQL | 2026-09-19 |
 | 620 | [Not Boring Movies](./0620-not-boring-movies/) | Easy | SQL | 2026-09-19 |
 | 181 | [Employees Earning More Than Their Managers](./0181-employees-earning-more-than-their-managers/) | Easy | SQL | 2026-09-19 |
 | 175 | [Combine Two Tables](./0175-combine-two-tables/) | Easy | SQL | 2026-09-19 |
@@ -37,6 +38,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | # | Problem | Difficulty | Language |
 |---:|---|---|---|
 | 620 | [Not Boring Movies](./0620-not-boring-movies/) | Easy | SQL |
+| 584 | [Find Customer Referee](./0584-find-customer-referee/) | Easy | SQL |
 | 181 | [Employees Earning More Than Their Managers](./0181-employees-earning-more-than-their-managers/) | Easy | SQL |
 | 175 | [Combine Two Tables](./0175-combine-two-tables/) | Easy | SQL |
 | 1 | [Two Sum](./0001-two-sum/) | Easy | Python |
