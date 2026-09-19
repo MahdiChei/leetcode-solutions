@@ -54,5 +54,12 @@
     "difficulty": "Medium",
     "language": "SQL",
     "solved_at": "2026-09-19T19:24:31+00:00"
+  },
+  "1245": {
+    "title": "User Activity for the Past 30 Days I",
+    "slug": "user-activity-for-the-past-30-days-i",
+    "difficulty": "Easy",
+    "language": "SQL",
+    "solved_at": "2026-09-19T20:24:48+00:00"
   }
 }

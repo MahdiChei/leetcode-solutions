@@ -7,10 +7,10 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:PROGRESS -->
 | Difficulty | Solved |
 |---|---:|
-| Easy | 7 |
+| Easy | 8 |
 | Medium | 1 |
 | Hard | 0 |
-| **Total** | **8** |
+| **Total** | **9** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,11 +25,11 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 1245 | [User Activity for the Past 30 Days I](./1245-user-activity-for-the-past-30-days-i/) | Easy | SQL | 2026-09-19 |
 | 1317 | [Monthly Transactions I](./1317-monthly-transactions-i/) | Medium | SQL | 2026-09-19 |
 | 596 | [Classes With at Least 5 Students](./0596-classes-with-at-least-5-students/) | Easy | SQL | 2026-09-19 |
 | 586 | [Customer Placing the Largest Number of Orders](./0586-customer-placing-the-largest-number-of-orders/) | Easy | SQL | 2026-09-19 |
 | 584 | [Find Customer Referee](./0584-find-customer-referee/) | Easy | SQL | 2026-09-19 |
-| 620 | [Not Boring Movies](./0620-not-boring-movies/) | Easy | SQL | 2026-09-19 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
@@ -38,6 +38,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | # | Problem | Difficulty | Language |
 |---:|---|---|---|
 | 1317 | [Monthly Transactions I](./1317-monthly-transactions-i/) | Medium | SQL |
+| 1245 | [User Activity for the Past 30 Days I](./1245-user-activity-for-the-past-30-days-i/) | Easy | SQL |
 | 620 | [Not Boring Movies](./0620-not-boring-movies/) | Easy | SQL |
 | 596 | [Classes With at Least 5 Students](./0596-classes-with-at-least-5-students/) | Easy | SQL |
 | 586 | [Customer Placing the Largest Number of Orders](./0586-customer-placing-the-largest-number-of-orders/) | Easy | SQL |
