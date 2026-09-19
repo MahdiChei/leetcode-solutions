@@ -12,5 +12,12 @@
     "difficulty": "Easy",
     "language": "SQL",
     "solved_at": "2026-09-19T15:55:26+00:00"
+  },
+  "0181": {
+    "title": "Employees Earning More Than Their Managers",
+    "slug": "employees-earning-more-than-their-managers",
+    "difficulty": "Easy",
+    "language": "SQL",
+    "solved_at": "2026-09-19T16:10:59+00:00"
   }
 }
