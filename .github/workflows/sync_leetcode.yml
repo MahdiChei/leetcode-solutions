@@ -14,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -27,6 +26,11 @@ jobs:
           destination-folder: .
           verbose: true
           commit-header: "[LeetCode]"
+
+      - name: Refresh repository after LeetCode sync
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
 
       - name: Install Python dependencies
         run: |
