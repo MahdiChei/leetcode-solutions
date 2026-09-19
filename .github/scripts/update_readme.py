@@ -1,187 +1,330 @@
 import json
 import re
-from pathlib import Path
 from datetime import datetime, timezone
-
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-README_PATH = ROOT / "README.md"
-METADATA_PATH = ROOT / ".github" / "leetcode_metadata.json"
+
+README_FILE = ROOT / "README.md"
+METADATA_FILE = ROOT / ".github" / "leetcode_metadata.json"
+
+START_MARKER = "<!-- AUTO-GENERATED:{section} -->"
+END_MARKER = "<!-- END AUTO-GENERATED:{section} -->"
 
 
-LANGUAGES = {
-    ".py": "Python",
-    ".php": "PHP",
-    ".java": "Java",
-    ".js": "JavaScript",
-    ".ts": "TypeScript",
-    ".cpp": "C++",
-    ".c": "C",
-    ".cs": "C#",
-    ".go": "Go",
-    ".rs": "Rust",
-    ".kt": "Kotlin",
-    ".swift": "Swift",
-    ".rb": "Ruby",
-    ".sql": "SQL",
-}
-
+# ---------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------
 
 def load_metadata():
-    if not METADATA_PATH.exists():
+    if not METADATA_FILE.exists():
         return {}
 
-    with open(METADATA_PATH, "r", encoding="utf-8") as file:
-        return json.load(file)
+    try:
+        with open(METADATA_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {}
 
 
 def save_metadata(metadata):
-    METADATA_PATH.parent.mkdir(parents=True, exist_ok=True)
+    METADATA_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(METADATA_PATH, "w", encoding="utf-8") as file:
-        json.dump(metadata, file, indent=2, ensure_ascii=False)
-
-
-def get_problem_number(folder_name):
-    match = re.match(r"^(\d+)-", folder_name)
-
-    if not match:
-        return None
-
-    return int(match.group(1))
+    with open(METADATA_FILE, "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=2, ensure_ascii=False)
+        f.write("\n")
 
 
-def get_problem_title(folder_name):
-    match = re.match(r"^\d+-(.+)$", folder_name)
-
-    if not match:
-        return folder_name
-
-    title = match.group(1)
-
-    return title.replace("-", " ").title()
-
-
-def read_problem_readme(problem_dir):
-    readme_path = problem_dir / "README.md"
-
-    if not readme_path.exists():
-        return {}
-
-    content = readme_path.read_text(encoding="utf-8")
-
-    difficulty = None
-
-    for level in ["Easy", "Medium", "Hard"]:
-        if re.search(rf"\b{level}\b", content, re.IGNORECASE):
-            difficulty = level
-            break
-
-    return {
-        "difficulty": difficulty or "Unknown"
+def detect_language(folder):
+    extensions = {
+        ".py": "Python",
+        ".php": "PHP",
+        ".js": "JavaScript",
+        ".ts": "TypeScript",
+        ".java": "Java",
+        ".cpp": "C++",
+        ".c": "C",
+        ".cs": "C#",
+        ".go": "Go",
+        ".rs": "Rust",
+        ".kt": "Kotlin",
+        ".swift": "Swift",
+        ".rb": "Ruby",
+        ".scala": "Scala",
+        ".sql": "SQL",
     }
 
+    # Prefer files named solution.*
+    solution_files = sorted(folder.glob("solution.*"))
 
-def detect_language(problem_dir):
-    for file in problem_dir.iterdir():
+    for file in solution_files:
+        if file.suffix.lower() in extensions:
+            return extensions[file.suffix.lower()]
 
-        if not file.is_file():
-            continue
-
-        if file.name.lower() == "readme.md":
-            continue
-
-        extension = file.suffix.lower()
-
-        if extension in LANGUAGES:
-            return LANGUAGES[extension]
+    # Fallback: inspect all files in the folder
+    for file in folder.iterdir():
+        if file.is_file() and file.suffix.lower() in extensions:
+            return extensions[file.suffix.lower()]
 
     return "Unknown"
 
 
-def collect_problems(metadata):
+def title_from_slug(slug):
+    """
+    two-sum -> Two Sum
+    valid-parentheses -> Valid Parentheses
+    """
+    return " ".join(word.capitalize() for word in slug.split("-"))
+
+
+def discover_problems():
+    """
+    Find directories such as:
+
+    0001-two-sum/
+    0015-3sum/
+    0020-valid-parentheses/
+    """
+
     problems = []
 
-    for item in ROOT.iterdir():
+    pattern = re.compile(r"^(\d+)-(.+)$")
 
-        if not item.is_dir():
+    for path in ROOT.iterdir():
+
+        if not path.is_dir():
             continue
 
-        problem_number = get_problem_number(item.name)
+        match = pattern.match(path.name)
 
-        if problem_number is None:
+        if not match:
             continue
 
-        problem_info = read_problem_readme(item)
+        number = match.group(1)
+        slug = match.group(2)
 
-        difficulty = problem_info.get("difficulty", "Unknown")
-        language = detect_language(item)
+        # Ignore folders that don't contain a solution
+        has_solution = any(
+            file.is_file() and file.name.startswith("solution.")
+            for file in path.iterdir()
+        )
 
-        problem_key = f"{problem_number:04d}"
-
-        if problem_key not in metadata:
-            metadata[problem_key] = {
-                "solved_at": datetime.now(timezone.utc).isoformat()
-            }
+        if not has_solution:
+            continue
 
         problems.append({
-            "number": problem_number,
-            "title": get_problem_title(item.name),
-            "difficulty": difficulty,
-            "language": language,
-            "solved_at": metadata[problem_key]["solved_at"],
+            "number": number,
+            "slug": slug,
+            "title": title_from_slug(slug),
+            "language": detect_language(path),
+            "folder": path,
         })
 
     return problems
 
 
-def generate_progress(problems):
-    counts = {
-        "Easy": 0,
-        "Medium": 0,
-        "Hard": 0,
-    }
+# ---------------------------------------------------------
+# Metadata
+# ---------------------------------------------------------
+
+def update_metadata(metadata, problems):
+    now = datetime.now(timezone.utc).isoformat()
 
     for problem in problems:
-        difficulty = problem["difficulty"]
 
-        if difficulty in counts:
-            counts[difficulty] += 1
+        number = problem["number"]
 
-    total = sum(counts.values())
+        if number not in metadata:
 
+            metadata[number] = {
+                "title": problem["title"],
+                "difficulty": "Unknown",
+                "language": problem["language"],
+                "solved_at": now,
+            }
+
+        else:
+
+            # Keep existing solved_at.
+            metadata[number]["title"] = problem["title"]
+            metadata[number]["language"] = problem["language"]
+
+            if "difficulty" not in metadata[number]:
+                metadata[number]["difficulty"] = "Unknown"
+
+            if "solved_at" not in metadata[number]:
+                metadata[number]["solved_at"] = now
+
+
+# ---------------------------------------------------------
+# README generation
+# ---------------------------------------------------------
+
+def replace_section(content, section, new_content):
+
+    start = START_MARKER.format(section=section)
+    end = END_MARKER.format(section=section)
+
+    pattern = re.compile(
+        re.escape(start) + r".*?" + re.escape(end),
+        re.DOTALL
+    )
+
+    replacement = (
+        f"{start}\n"
+        f"{new_content}\n"
+        f"{end}"
+    )
+
+    if pattern.search(content):
+        return pattern.sub(replacement, content)
+
+    # If the section doesn't exist, append it.
     return (
-        "| Difficulty | Solved |\n"
-        "|---|---:|\n"
-        f"| Easy | {counts['Easy']} |\n"
-        f"| Medium | {counts['Medium']} |\n"
-        f"| Hard | {counts['Hard']} |\n"
-        f"| **Total** | **{total}** |"
+        content.rstrip()
+        + "\n\n"
+        + replacement
+        + "\n"
     )
 
 
-def generate_languages(problems):
-    languages = sorted(
-        {
-            problem["language"]
-            for problem in problems
-            if problem["language"] != "Unknown"
-        }
-    )
+def generate_progress(metadata):
+
+    easy = 0
+    medium = 0
+    hard = 0
+
+    for item in metadata.values():
+
+        difficulty = item.get("difficulty", "Unknown").lower()
+
+        if difficulty == "easy":
+            easy += 1
+
+        elif difficulty == "medium":
+            medium += 1
+
+        elif difficulty == "hard":
+            hard += 1
+
+    total = len(metadata)
+
+    return f"""| Difficulty | Solved |
+|---|---:|
+| Easy | {easy} |
+| Medium | {medium} |
+| Hard | {hard} |
+| **Total** | **{total} |"""
+
+
+def generate_languages(metadata):
+
+    languages = sorted({
+        item.get("language", "Unknown")
+        for item in metadata.values()
+    })
 
     if not languages:
         return "No solutions yet."
 
-    return "\n".join(f"- {language}" for language in languages)
+    return "\n".join(
+        f"- {language}"
+        for language in languages
+    )
 
 
-def generate_problem_table(problems):
-    if not problems:
+def generate_recent(metadata):
+
+    if not metadata:
         return "No solutions yet."
 
-    sorted_problems = sorted(
-        problems,
-        key=lambda problem: problem["number"],
+    items = []
+
+    for number, data in metadata.items():
+
+        items.append({
+            "number": number,
+            **data
+        })
+
+    items.sort(
+        key=lambda x: x.get("solved_at", ""),
+        reverse=True
+    )
+
+    items = items[:5]
+
+    lines = [
+        "| # | Problem | Difficulty | Language | Solved |",
+        "|---:|---|---|---|---|"
+    ]
+
+    for item in items:
+
+        number = int(item["number"])
+
+        title = item.get(
+            "title",
+            f"Problem {number}"
+        )
+
+        difficulty = item.get(
+            "difficulty",
+            "Unknown"
+        )
+
+        language = item.get(
+            "language",
+            "Unknown"
+        )
+
+        solved_at = item.get(
+            "solved_at",
+            ""
+        )
+
+        # Keep the displayed date readable
+        if solved_at:
+            try:
+                dt = datetime.fromisoformat(
+                    solved_at.replace("Z", "+00:00")
+                )
+                solved_display = dt.strftime("%Y-%m-%d")
+            except ValueError:
+                solved_display = solved_at[:10]
+        else:
+            solved_display = ""
+
+        folder = f"{number:04d}-{item.get('slug', title.lower().replace(' ', '-'))}"
+
+        lines.append(
+            f"| {number} | "
+            f"[{title}](./{folder}/) | "
+            f"{difficulty} | "
+            f"{language} | "
+            f"{solved_display} |"
+        )
+
+    return "\n".join(lines)
+
+
+def generate_all_problems(metadata):
+
+    if not metadata:
+        return "No solutions yet."
+
+    items = []
+
+    for number, data in metadata.items():
+
+        items.append({
+            "number": number,
+            **data
+        })
+
+    # Numerical descending order
+    items.sort(
+        key=lambda x: int(x["number"]),
         reverse=True
     )
 
@@ -190,116 +333,144 @@ def generate_problem_table(problems):
         "|---:|---|---|---|"
     ]
 
-    for problem in sorted_problems:
+    for item in items:
+
+        number = int(item["number"])
+
+        title = item.get(
+            "title",
+            f"Problem {number}"
+        )
+
+        difficulty = item.get(
+            "difficulty",
+            "Unknown"
+        )
+
+        language = item.get(
+            "language",
+            "Unknown"
+        )
+
+        slug = item.get(
+            "slug",
+            title.lower().replace(" ", "-")
+        )
+
+        folder = f"{number:04d}-{slug}"
+
         lines.append(
-            f"| {problem['number']} | "
-            f"{problem['title']} | "
-            f"{problem['difficulty']} | "
-            f"{problem['language']} |"
+            f"| {number} | "
+            f"[{title}](./{folder}/) | "
+            f"{difficulty} | "
+            f"{language} |"
         )
 
     return "\n".join(lines)
 
 
-def generate_recent_table(problems):
-    if not problems:
-        return "No solutions yet."
-
-    recent = sorted(
-        problems,
-        key=lambda problem: problem["solved_at"],
-        reverse=True
-    )[:5]
-
-    lines = [
-        "| # | Problem | Difficulty | Language |",
-        "|---:|---|---|---|"
-    ]
-
-    for problem in recent:
-        lines.append(
-            f"| {problem['number']} | "
-            f"{problem['title']} | "
-            f"{problem['difficulty']} | "
-            f"{problem['language']} |"
-        )
-
-    return "\n".join(lines)
-
-
-def replace_section(content, section_name, new_content):
-    pattern = (
-        rf"(<!-- AUTO-GENERATED:{section_name} -->)"
-        rf".*?"
-        rf"(<!-- END AUTO-GENERATED:{section_name} -->)"
-    )
-
-    replacement = (
-        rf"\1\n"
-        f"{new_content}\n"
-        rf"\2"
-    )
-
-    updated_content, count = re.subn(
-        pattern,
-        replacement,
-        content,
-        flags=re.DOTALL
-    )
-
-    if count == 0:
-        raise RuntimeError(
-            f"Could not find AUTO-GENERATED:{section_name} "
-            f"markers in README.md"
-        )
-
-    return updated_content
-
-
-def update_readme(problems):
-    content = README_PATH.read_text(encoding="utf-8")
-
-    content = replace_section(
-        content,
-        "PROGRESS",
-        generate_progress(problems)
-    )
-
-    content = replace_section(
-        content,
-        "LANGUAGES",
-        generate_languages(problems)
-    )
-
-    content = replace_section(
-        content,
-        "RECENT",
-        generate_recent_table(problems)
-    )
-
-    content = replace_section(
-        content,
-        "PROBLEMS",
-        generate_problem_table(problems)
-    )
-
-    README_PATH.write_text(
-        content,
-        encoding="utf-8"
-    )
-
+# ---------------------------------------------------------
+# Main
+# ---------------------------------------------------------
 
 def main():
+
+    print("Scanning LeetCode solutions...")
+
+    problems = discover_problems()
+
+    print(f"Found {len(problems)} solution(s).")
+
     metadata = load_metadata()
 
-    problems = collect_problems(metadata)
+    # Keep slug information in metadata so README links
+    # remain correct.
+    for problem in problems:
+
+        number = problem["number"]
+
+        if number not in metadata:
+            metadata[number] = {}
+
+        metadata[number]["slug"] = problem["slug"]
+
+    update_metadata(metadata, problems)
 
     save_metadata(metadata)
 
-    update_readme(problems)
+    if README_FILE.exists():
 
-    print(f"Found {len(problems)} LeetCode problems.")
-    print("README.md updated successfully.")
+        readme = README_FILE.read_text(
+            encoding="utf-8"
+        )
+
+    else:
+
+        readme = """# LeetCode Solutions
+
+My solutions to LeetCode problems, automatically synchronized using GitHub Actions.
+
+## Progress
+
+<!-- AUTO-GENERATED:PROGRESS -->
+| Difficulty | Solved |
+|---|---:|
+| Easy | 0 |
+| Medium | 0 |
+| Hard | 0 |
+| **Total** | **0** |
+<!-- END AUTO-GENERATED:PROGRESS -->
+
+## Languages
+
+<!-- AUTO-GENERATED:LANGUAGES -->
+No solutions yet.
+<!-- END AUTO-GENERATED:LANGUAGES -->
+
+## Recent Solutions
+
+<!-- AUTO-GENERATED:RECENT -->
+No solutions yet.
+<!-- END AUTO-GENERATED:RECENT -->
+
+## All Problems
+
+<!-- AUTO-GENERATED:PROBLEMS -->
+No solutions yet.
+<!-- END AUTO-GENERATED:PROBLEMS -->
+"""
+
+    readme = replace_section(
+        readme,
+        "PROGRESS",
+        generate_progress(metadata)
+    )
+
+    readme = replace_section(
+        readme,
+        "LANGUAGES",
+        generate_languages(metadata)
+    )
+
+    readme = replace_section(
+        readme,
+        "RECENT",
+        generate_recent(metadata)
+    )
+
+    readme = replace_section(
+        readme,
+        "PROBLEMS",
+        generate_all_problems(metadata)
+    )
+
+    README_FILE.write_text(
+        readme,
+        encoding="utf-8"
+    )
+
+    print("README updated.")
+    print("Metadata updated.")
 
 
 if __name__ == "__main__":
