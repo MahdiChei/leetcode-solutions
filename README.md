@@ -7,26 +7,30 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:PROGRESS -->
 | Difficulty | Solved |
 |---|---:|
-| Easy | 0 |
+| Easy | 1 |
 | Medium | 0 |
 | Hard | 0 |
-| **Total** | **0** |
+| **Total** | **1** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
 
 <!-- AUTO-GENERATED:LANGUAGES -->
-No solutions yet.
+- Python
 <!-- END AUTO-GENERATED:LANGUAGES -->
 
 ## Recent Solutions
 
 <!-- AUTO-GENERATED:RECENT -->
-No solutions yet.
+| # | Problem | Difficulty | Language | Solved |
+|---:|---|---|---|---|
+| 1 | [Two Sum](./0001-two-sum/) | Easy | Python | 2026-09-19 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
 
 <!-- AUTO-GENERATED:PROBLEMS -->
-No solutions yet.
+| # | Problem | Difficulty | Language |
+|---:|---|---|---|
+| 1 | [Two Sum](./0001-two-sum/) | Easy | Python |
 <!-- END AUTO-GENERATED:PROBLEMS -->

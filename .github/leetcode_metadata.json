@@ -1,1 +1,9 @@
-{}
+{
+  "0001": {
+    "title": "Two Sum",
+    "slug": "two-sum",
+    "difficulty": "Easy",
+    "language": "Python",
+    "solved_at": "2026-09-19T14:23:55+00:00"
+  }
+}
