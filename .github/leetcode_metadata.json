@@ -33,5 +33,12 @@
     "difficulty": "Easy",
     "language": "SQL",
     "solved_at": "2026-09-19T16:52:59+00:00"
+  },
+  "0586": {
+    "title": "Customer Placing the Largest Number of Orders",
+    "slug": "customer-placing-the-largest-number-of-orders",
+    "difficulty": "Easy",
+    "language": "SQL",
+    "solved_at": "2026-09-19T18:48:56+00:00"
   }
 }
