@@ -75,5 +75,12 @@
     "difficulty": "Medium",
     "language": "SQL",
     "solved_at": "2026-09-20T08:53:23+00:00"
+  },
+  "0608": {
+    "title": "Tree Node",
+    "slug": "tree-node",
+    "difficulty": "Medium",
+    "language": "SQL",
+    "solved_at": "2026-09-20T09:25:06+00:00"
   }
 }

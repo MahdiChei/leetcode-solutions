@@ -8,9 +8,9 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | Difficulty | Solved |
 |---|---:|
 | Easy | 9 |
-| Medium | 2 |
+| Medium | 3 |
 | Hard | 0 |
-| **Total** | **11** |
+| **Total** | **12** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,11 +25,11 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 608 | [Tree Node](./0608-tree-node/) | Medium | SQL | 2026-09-20 |
 | 1135 | [Customers Who Bought All Products](./1135-customers-who-bought-all-products/) | Medium | SQL | 2026-09-20 |
 | 1415 | [Students and Examinations](./1415-students-and-examinations/) | Easy | SQL | 2026-09-19 |
 | 1245 | [User Activity for the Past 30 Days I](./1245-user-activity-for-the-past-30-days-i/) | Easy | SQL | 2026-09-19 |
 | 1317 | [Monthly Transactions I](./1317-monthly-transactions-i/) | Medium | SQL | 2026-09-19 |
-| 596 | [Classes With at Least 5 Students](./0596-classes-with-at-least-5-students/) | Easy | SQL | 2026-09-19 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
@@ -42,6 +42,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | 1245 | [User Activity for the Past 30 Days I](./1245-user-activity-for-the-past-30-days-i/) | Easy | SQL |
 | 1135 | [Customers Who Bought All Products](./1135-customers-who-bought-all-products/) | Medium | SQL |
 | 620 | [Not Boring Movies](./0620-not-boring-movies/) | Easy | SQL |
+| 608 | [Tree Node](./0608-tree-node/) | Medium | SQL |
 | 596 | [Classes With at Least 5 Students](./0596-classes-with-at-least-5-students/) | Easy | SQL |
 | 586 | [Customer Placing the Largest Number of Orders](./0586-customer-placing-the-largest-number-of-orders/) | Easy | SQL |
 | 584 | [Find Customer Referee](./0584-find-customer-referee/) | Easy | SQL |
