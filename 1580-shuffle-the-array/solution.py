@@ -7,6 +7,5 @@ class Solution(object):
         """
         result = []
         for i in range(n):
-            result.append(nums[i])
-            result.append(nums[n+i])
+            result.extend([nums[i], nums[n+i]])
         return result
