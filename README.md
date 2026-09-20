@@ -25,9 +25,9 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python | 2026-09-20 |
 | 485 | [Max Consecutive Ones](./0485-max-consecutive-ones/) | Easy | Python | 2026-09-20 |
 | 1580 | [Shuffle the Array](./1580-shuffle-the-array/) | Easy | Python | 2026-09-20 |
-| 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python | 2026-09-20 |
 | 1480 | [Movie Rating](./1480-movie-rating/) | Medium | SQL | 2026-09-20 |
 | 608 | [Tree Node](./0608-tree-node/) | Medium | SQL | 2026-09-20 |
 <!-- END AUTO-GENERATED:RECENT -->
