@@ -7,10 +7,10 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:PROGRESS -->
 | Difficulty | Solved |
 |---|---:|
-| Easy | 11 |
+| Easy | 12 |
 | Medium | 4 |
 | Hard | 0 |
-| **Total** | **15** |
+| **Total** | **16** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,11 +25,11 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 485 | [Max Consecutive Ones](./0485-max-consecutive-ones/) | Easy | Python | 2026-09-20 |
 | 1580 | [Shuffle the Array](./1580-shuffle-the-array/) | Easy | Python | 2026-09-20 |
 | 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python | 2026-09-20 |
 | 1480 | [Movie Rating](./1480-movie-rating/) | Medium | SQL | 2026-09-20 |
 | 608 | [Tree Node](./0608-tree-node/) | Medium | SQL | 2026-09-20 |
-| 1135 | [Customers Who Bought All Products](./1135-customers-who-bought-all-products/) | Medium | SQL | 2026-09-20 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
@@ -49,6 +49,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | 596 | [Classes With at Least 5 Students](./0596-classes-with-at-least-5-students/) | Easy | SQL |
 | 586 | [Customer Placing the Largest Number of Orders](./0586-customer-placing-the-largest-number-of-orders/) | Easy | SQL |
 | 584 | [Find Customer Referee](./0584-find-customer-referee/) | Easy | SQL |
+| 485 | [Max Consecutive Ones](./0485-max-consecutive-ones/) | Easy | Python |
 | 181 | [Employees Earning More Than Their Managers](./0181-employees-earning-more-than-their-managers/) | Easy | SQL |
 | 175 | [Combine Two Tables](./0175-combine-two-tables/) | Easy | SQL |
 | 1 | [Two Sum](./0001-two-sum/) | Easy | Python |
