@@ -5,7 +5,7 @@ case
     when ((select count(*) from Tree chld where chld.p_id = Tr.id) = 0) then "Leaf"
     when ((select count(*) from Tree chld where chld.p_id = Tr.id) >= 1) then "Inner"
     when ((select count(*) from Tree chld where chld.p_id = Tr.id) = 0) then "Leaf"
-    ELSE "nothing"
+    ELSE "EL Mahdi CHEIKH"
 end as  "type"
 from Tree Tr
 
