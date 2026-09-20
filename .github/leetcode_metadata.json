@@ -68,5 +68,12 @@
     "difficulty": "Easy",
     "language": "SQL",
     "solved_at": "2026-09-19T23:23:07+00:00"
+  },
+  "1135": {
+    "title": "Customers Who Bought All Products",
+    "slug": "customers-who-bought-all-products",
+    "difficulty": "Medium",
+    "language": "SQL",
+    "solved_at": "2026-09-20T08:53:23+00:00"
   }
 }
