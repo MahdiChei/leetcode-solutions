@@ -89,5 +89,12 @@
     "difficulty": "Medium",
     "language": "SQL",
     "solved_at": "2026-09-20T10:39:58+00:00"
+  },
+  "2058": {
+    "title": "Concatenation of Array",
+    "slug": "concatenation-of-array",
+    "difficulty": "Easy",
+    "language": "Python",
+    "solved_at": "2026-09-20T10:49:35+00:00"
   }
 }
