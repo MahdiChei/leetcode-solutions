@@ -8,9 +8,9 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | Difficulty | Solved |
 |---|---:|
 | Easy | 9 |
-| Medium | 3 |
+| Medium | 4 |
 | Hard | 0 |
-| **Total** | **12** |
+| **Total** | **13** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,11 +25,11 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 1480 | [Movie Rating](./1480-movie-rating/) | Medium | SQL | 2026-09-20 |
 | 608 | [Tree Node](./0608-tree-node/) | Medium | SQL | 2026-09-20 |
 | 1135 | [Customers Who Bought All Products](./1135-customers-who-bought-all-products/) | Medium | SQL | 2026-09-20 |
 | 1415 | [Students and Examinations](./1415-students-and-examinations/) | Easy | SQL | 2026-09-19 |
 | 1245 | [User Activity for the Past 30 Days I](./1245-user-activity-for-the-past-30-days-i/) | Easy | SQL | 2026-09-19 |
-| 1317 | [Monthly Transactions I](./1317-monthly-transactions-i/) | Medium | SQL | 2026-09-19 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
@@ -37,6 +37,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:PROBLEMS -->
 | # | Problem | Difficulty | Language |
 |---:|---|---|---|
+| 1480 | [Movie Rating](./1480-movie-rating/) | Medium | SQL |
 | 1415 | [Students and Examinations](./1415-students-and-examinations/) | Easy | SQL |
 | 1317 | [Monthly Transactions I](./1317-monthly-transactions-i/) | Medium | SQL |
 | 1245 | [User Activity for the Past 30 Days I](./1245-user-activity-for-the-past-30-days-i/) | Easy | SQL |
