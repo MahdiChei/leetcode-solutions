@@ -7,10 +7,10 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:PROGRESS -->
 | Difficulty | Solved |
 |---|---:|
-| Easy | 12 |
+| Easy | 13 |
 | Medium | 4 |
 | Hard | 0 |
-| **Total** | **16** |
+| **Total** | **17** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,11 +25,11 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 1482 | [How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number/) | Easy | Python | 2026-09-23 |
 | 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python | 2026-09-20 |
 | 485 | [Max Consecutive Ones](./0485-max-consecutive-ones/) | Easy | Python | 2026-09-20 |
 | 1580 | [Shuffle the Array](./1580-shuffle-the-array/) | Easy | Python | 2026-09-20 |
 | 1480 | [Movie Rating](./1480-movie-rating/) | Medium | SQL | 2026-09-20 |
-| 608 | [Tree Node](./0608-tree-node/) | Medium | SQL | 2026-09-20 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
@@ -39,6 +39,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 |---:|---|---|---|
 | 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python |
 | 1580 | [Shuffle the Array](./1580-shuffle-the-array/) | Easy | Python |
+| 1482 | [How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number/) | Easy | Python |
 | 1480 | [Movie Rating](./1480-movie-rating/) | Medium | SQL |
 | 1415 | [Students and Examinations](./1415-students-and-examinations/) | Easy | SQL |
 | 1317 | [Monthly Transactions I](./1317-monthly-transactions-i/) | Medium | SQL |
