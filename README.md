@@ -25,8 +25,8 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
-| 448 | [Find All Numbers Disappeared in an Array](./0448-find-all-numbers-disappeared-in-an-array/) | Easy | Python | 2026-09-25 |
 | 645 | [Set Mismatch](./0645-set-mismatch/) | Easy | Python | 2026-09-25 |
+| 448 | [Find All Numbers Disappeared in an Array](./0448-find-all-numbers-disappeared-in-an-array/) | Easy | Python | 2026-09-25 |
 | 1482 | [How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number/) | Easy | Python | 2026-09-23 |
 | 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python | 2026-09-20 |
 | 485 | [Max Consecutive Ones](./0485-max-consecutive-ones/) | Easy | Python | 2026-09-20 |
