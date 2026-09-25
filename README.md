@@ -7,10 +7,10 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:PROGRESS -->
 | Difficulty | Solved |
 |---|---:|
-| Easy | 14 |
+| Easy | 15 |
 | Medium | 4 |
 | Hard | 0 |
-| **Total** | **18** |
+| **Total** | **19** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,11 +25,11 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 448 | [Find All Numbers Disappeared in an Array](./0448-find-all-numbers-disappeared-in-an-array/) | Easy | Python | 2026-09-25 |
 | 645 | [Set Mismatch](./0645-set-mismatch/) | Easy | Python | 2026-09-25 |
 | 1482 | [How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number/) | Easy | Python | 2026-09-23 |
 | 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python | 2026-09-20 |
 | 485 | [Max Consecutive Ones](./0485-max-consecutive-ones/) | Easy | Python | 2026-09-20 |
-| 1580 | [Shuffle the Array](./1580-shuffle-the-array/) | Easy | Python | 2026-09-20 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
@@ -52,6 +52,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | 586 | [Customer Placing the Largest Number of Orders](./0586-customer-placing-the-largest-number-of-orders/) | Easy | SQL |
 | 584 | [Find Customer Referee](./0584-find-customer-referee/) | Easy | SQL |
 | 485 | [Max Consecutive Ones](./0485-max-consecutive-ones/) | Easy | Python |
+| 448 | [Find All Numbers Disappeared in an Array](./0448-find-all-numbers-disappeared-in-an-array/) | Easy | Python |
 | 181 | [Employees Earning More Than Their Managers](./0181-employees-earning-more-than-their-managers/) | Easy | SQL |
 | 175 | [Combine Two Tables](./0175-combine-two-tables/) | Easy | SQL |
 | 1 | [Two Sum](./0001-two-sum/) | Easy | Python |

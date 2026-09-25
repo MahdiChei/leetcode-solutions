@@ -124,5 +124,12 @@
     "difficulty": "Easy",
     "language": "Python",
     "solved_at": "2026-09-25T14:07:11+00:00"
+  },
+  "0448": {
+    "title": "Find All Numbers Disappeared in an Array",
+    "slug": "find-all-numbers-disappeared-in-an-array",
+    "difficulty": "Easy",
+    "language": "Python",
+    "solved_at": "2026-09-25T20:53:41+00:00"
   }
 }
