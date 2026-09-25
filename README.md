@@ -7,10 +7,10 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:PROGRESS -->
 | Difficulty | Solved |
 |---|---:|
-| Easy | 13 |
+| Easy | 14 |
 | Medium | 4 |
 | Hard | 0 |
-| **Total** | **17** |
+| **Total** | **18** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,11 +25,11 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 645 | [Set Mismatch](./0645-set-mismatch/) | Easy | Python | 2026-09-25 |
 | 1482 | [How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number/) | Easy | Python | 2026-09-23 |
 | 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python | 2026-09-20 |
 | 485 | [Max Consecutive Ones](./0485-max-consecutive-ones/) | Easy | Python | 2026-09-20 |
 | 1580 | [Shuffle the Array](./1580-shuffle-the-array/) | Easy | Python | 2026-09-20 |
-| 1480 | [Movie Rating](./1480-movie-rating/) | Medium | SQL | 2026-09-20 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
@@ -45,6 +45,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | 1317 | [Monthly Transactions I](./1317-monthly-transactions-i/) | Medium | SQL |
 | 1245 | [User Activity for the Past 30 Days I](./1245-user-activity-for-the-past-30-days-i/) | Easy | SQL |
 | 1135 | [Customers Who Bought All Products](./1135-customers-who-bought-all-products/) | Medium | SQL |
+| 645 | [Set Mismatch](./0645-set-mismatch/) | Easy | Python |
 | 620 | [Not Boring Movies](./0620-not-boring-movies/) | Easy | SQL |
 | 608 | [Tree Node](./0608-tree-node/) | Medium | SQL |
 | 596 | [Classes With at Least 5 Students](./0596-classes-with-at-least-5-students/) | Easy | SQL |
