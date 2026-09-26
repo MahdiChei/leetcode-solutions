@@ -8,9 +8,9 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | Difficulty | Solved |
 |---|---:|
 | Easy | 15 |
-| Medium | 4 |
+| Medium | 5 |
 | Hard | 0 |
-| **Total** | **19** |
+| **Total** | **20** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,11 +25,11 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 1552 | [Build an Array With Stack Operations](./1552-build-an-array-with-stack-operations/) | Medium | Python | 2026-09-26 |
 | 645 | [Set Mismatch](./0645-set-mismatch/) | Easy | Python | 2026-09-25 |
 | 448 | [Find All Numbers Disappeared in an Array](./0448-find-all-numbers-disappeared-in-an-array/) | Easy | Python | 2026-09-25 |
 | 1482 | [How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number/) | Easy | Python | 2026-09-23 |
 | 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python | 2026-09-20 |
-| 485 | [Max Consecutive Ones](./0485-max-consecutive-ones/) | Easy | Python | 2026-09-20 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
@@ -39,6 +39,7 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 |---:|---|---|---|
 | 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python |
 | 1580 | [Shuffle the Array](./1580-shuffle-the-array/) | Easy | Python |
+| 1552 | [Build an Array With Stack Operations](./1552-build-an-array-with-stack-operations/) | Medium | Python |
 | 1482 | [How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number/) | Easy | Python |
 | 1480 | [Movie Rating](./1480-movie-rating/) | Medium | SQL |
 | 1415 | [Students and Examinations](./1415-students-and-examinations/) | Easy | SQL |
