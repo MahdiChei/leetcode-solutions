@@ -8,9 +8,9 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | Difficulty | Solved |
 |---|---:|
 | Easy | 15 |
-| Medium | 5 |
+| Medium | 6 |
 | Hard | 0 |
-| **Total** | **20** |
+| **Total** | **21** |
 <!-- END AUTO-GENERATED:PROGRESS -->
 
 ## Languages
@@ -25,11 +25,11 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 <!-- AUTO-GENERATED:RECENT -->
 | # | Problem | Difficulty | Language | Solved |
 |---:|---|---|---|---|
+| 150 | [Evaluate Reverse Polish Notation](./0150-evaluate-reverse-polish-notation/) | Medium | Python | 2026-09-30 |
 | 1552 | [Build an Array With Stack Operations](./1552-build-an-array-with-stack-operations/) | Medium | Python | 2026-09-26 |
 | 645 | [Set Mismatch](./0645-set-mismatch/) | Easy | Python | 2026-09-25 |
 | 448 | [Find All Numbers Disappeared in an Array](./0448-find-all-numbers-disappeared-in-an-array/) | Easy | Python | 2026-09-25 |
 | 1482 | [How Many Numbers Are Smaller Than the Current Number](./1482-how-many-numbers-are-smaller-than-the-current-number/) | Easy | Python | 2026-09-23 |
-| 2058 | [Concatenation of Array](./2058-concatenation-of-array/) | Easy | Python | 2026-09-20 |
 <!-- END AUTO-GENERATED:RECENT -->
 
 ## All Problems
@@ -56,5 +56,6 @@ My solutions to LeetCode problems, automatically synchronized using GitHub Actio
 | 448 | [Find All Numbers Disappeared in an Array](./0448-find-all-numbers-disappeared-in-an-array/) | Easy | Python |
 | 181 | [Employees Earning More Than Their Managers](./0181-employees-earning-more-than-their-managers/) | Easy | SQL |
 | 175 | [Combine Two Tables](./0175-combine-two-tables/) | Easy | SQL |
+| 150 | [Evaluate Reverse Polish Notation](./0150-evaluate-reverse-polish-notation/) | Medium | Python |
 | 1 | [Two Sum](./0001-two-sum/) | Easy | Python |
 <!-- END AUTO-GENERATED:PROBLEMS -->
